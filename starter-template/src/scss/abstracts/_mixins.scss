@@ -1,0 +1,22 @@
+@use "sass:map";
+@use "breakpoints" as *;
+
+@mixin breakpoint($size) {
+  $breakpoint: map.get($breakpoints, $size);
+
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+//example usage
+@include breakpoint("medium") {
+  body {
+    color: red;
+  }
+}
+@include breakpoint("large") {
+  body {
+    color: white;
+  }
+}
