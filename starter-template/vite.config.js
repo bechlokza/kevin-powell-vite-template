@@ -1,7 +1,9 @@
 import { resolve } from "path";
 import { defineConfig } from "vite";
+import htmlPurge from "vite-plugin-purgecss";
 
 export default defineConfig({
+  plugins: [htmlPurge()],
   root: resolve(__dirname, "src/"),
   build: {
     outDir: "../dist",
