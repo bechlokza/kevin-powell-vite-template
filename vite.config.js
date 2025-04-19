@@ -1,6 +1,7 @@
 import { resolve } from "path";
 import { defineConfig } from "vite";
 import purgecss from "vite-plugin-purgecss";
+import scssSorter from "./vite-plugin-scss-sorter";
 import fs from 'fs';
 import path from 'path';
 
@@ -57,7 +58,8 @@ function scssIndexPlugin() {
 export default defineConfig({
   plugins: [
     purgecss(),
-    scssIndexPlugin()
+    scssIndexPlugin(),
+    scssSorter()
   ],
   root: resolve(__dirname, "src/"),
   build: {
@@ -81,6 +83,9 @@ export default defineConfig({
           return false; // prevents the process from exiting
         }
       }
+    },
+    postcss: {
+      writeToFile: true
     }
   }
 });

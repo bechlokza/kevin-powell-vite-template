@@ -2,14 +2,14 @@
 
 .button {
   display: inline-flex;
-  cursor: pointer;
-  text-decoration: none;
-  text-transform: uppercase;
-  line-height: 1;
+  padding: 1.125em 2em;
   border: 0;
   font-weight: $fw-700;
-  padding: 1.125em 2em;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
   transition: 275ms ease;
+  cursor: pointer;
 
   &[data-type="accent"] {
     background-color: clr(primary, 400);

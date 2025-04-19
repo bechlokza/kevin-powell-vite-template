@@ -2,6 +2,8 @@
   "extends": "stylelint-config-standard-scss",
   "plugins": ["stylelint-order"],
   "rules": {
+    "no-empty-source": null,
+    "scss/double-slash-comment-whitespace-inside": null,
     "order/properties-order": [
       {
         "groupName": "Box Model",
@@ -31,7 +33,7 @@
         ]
       },
       {
-        "groupName": "Positioning",
+        "groupName": "Layout",
         "properties": [
           "position",
           "top",

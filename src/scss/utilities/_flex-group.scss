@@ -2,10 +2,9 @@
 
 .flex-group {
   display: flex;
-  flex-wrap: wrap;
-  column-gap: var(--flex-column-gap, $flex-group-gap);
-  row-gap: var(--flex-row-gap, calc($flex-group-gap / 2));
   width: fit-content;
+  flex-wrap: wrap;
+  gap: var(--flex-row-gap, calc($flex-group-gap / 2)) var(--flex-column-gap, $flex-group-gap);
 }
 
 .flex-group.mx-auto {
